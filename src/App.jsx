@@ -86,8 +86,8 @@ const App = () => {
             <p>{userID}</p>
 
             <div className="btn-box">
-              <button>Delate</button>
-              <button>Edit</button>
+              <button className="btn">Delate</button>
+              <button className="btn">Edit</button>
             </div>
           </div>
       ))
