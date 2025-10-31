@@ -1,38 +1,55 @@
-.App {
-  text-align: center;
+/* .conteiner{
+    position: relative;
+    margin: 270px auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+
+    background: #000;
+    color: white;
+    border-radius: 50%;
+    width: 500px;
+    height: 500px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.Age{
+    margin: auto;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.Age-conteiner{
+    position: absolute;
+    top: 350px;
+    border-radius: 20px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.Age-btn{
+    width: 100px;
+    height: 100px;
+    color: white;
+    background-color: black;
+    border: 1px solid white;
 }
 
-.App-link {
-  color: #61dafb;
-}
+.title{
+    color: black;
+    position: absolute;
+    bottom: 500px;
+    font-size: 30px;
+} */
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.Conteiner{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 50px auto;
+    gap: 50px;
+    padding: 20px;
+
+    width: 1200px;
+    height: 200px;
+    border: 2px solid #222;
+    background-color: #111;
+    border-radius: 50px;
 }
