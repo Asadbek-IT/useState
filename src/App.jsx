@@ -62,41 +62,77 @@
 
 // export default App;
 
+// import "./App.css";
+// import React, { useEffect, useState } from "react";
+
+// const App = () => {
+//   const [count, setCount] = useState(0);
+//   const [data, setData] = useState([]);
+//   useEffect(() => {
+//     fetch('https://jsonplaceholder.typicode.com/posts').then((res) => res.json().then((data) => setData(data)));
+//   }, []);
+
+//   const increment = () => {
+//     setCount((count) => count + 1);
+//   };
+
+//   return (
+//     <div className="Box">
+//       {data.length ? (
+//         data.map(({title, id, userID}) => (
+//           <div className="Conteiner">
+//             <h1>{title}</h1>
+//             <p>{id}</p>
+//             <p>{userID}</p>
+
+//             <div className="btn-box">
+//               <button className="btn">Delate</button>
+//               <button className="btn">Edit</button>
+//             </div>
+//           </div>
+//       ))
+
+//     ) : (
+//       <h1>Loading...</h1>
+//     )}
+//     </div>
+//   );
+// }
+
+// export default App;
 import "./App.css";
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState } from 'react';
 
 const App = () => {
-  const [count, setCount] = useState(0);
-  const [data, setData] = useState([]);
+  const [products, setProducts] = useState([]);
+  const api = 'https://fakestoreapi.com/products';
+
   useEffect(() => {
-    fetch('https://jsonplaceholder.typicode.com/posts').then((res) => res.json().then((data) => setData(data)));
+    fetch(api).then((res) => res.json()).then((data) => setProducts(data));
   }, []);
 
-  const increment = () => {
-    setCount((count) => count + 1);
-  };
+
 
   return (
-    <div className="Box">
-      {data.length ? (
-        data.map(({title, id, userID}) => (
-          <div className="Conteiner">
-            <h1>{title}</h1>
-            <p>{id}</p>
-            <p>{userID}</p>
+    <div className="Wrapper">
 
-            <div className="btn-box">
-              <button className="btn">Delate</button>
-              <button className="btn">Edit</button>
+      <h1 className="title">
+        {products.length <= 0 ? "Loading..." : "Products"}
+      </h1>
+
+      <div className="box">
+        {
+          products.map((item) => (
+            <div className="conteiner">
+              <img src={item.image} alt="" />
+              <h1 className="title-card">{item.title}</h1>
+              <p className="text-card">{item.price}</p>
             </div>
-          </div>
-      ))
-
-    ) : (
-      <h1>Loading...</h1>
-    )}
+          ))
+        }
+      </div>
     </div>
-  );
+  )
 }
 
 export default App;
