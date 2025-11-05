@@ -100,37 +100,61 @@
 // }
 
 // export default App;
-import "./App.css";
+
+
+// import "./App.css";
+// import React, { useEffect, useState } from 'react';
+
+// const App = () => {
+//   const [products, setProducts] = useState([]);
+//   const api = 'https://fakestoreapi.com/products';
+
+//   useEffect(() => {
+//     fetch(api).then((res) => res.json()).then((data) => setProducts(data));
+//   }, []);
+
+  
+
+//   return (
+//     <div className="Wrapper">
+
+//       <h1 className="title">
+//         {products.length <= 0 ? "Loading..." : "Products"}
+//       </h1>
+
+//       <div className="box">
+//         {
+//           products.map((item) => (
+//             <div className="conteiner">
+//               <img src={item.image} alt="" />
+//               <h1 className="title-card">{item.title}</h1>
+//               <p className="text-card">{item.price}</p>
+//             </div>
+//           ))
+//         }
+//       </div>
+//     </div>
+//   )
+// }
+
+// export default App;
+
 import React, { useEffect, useState } from 'react';
+import ProductList from './components/ProductList';
 
 const App = () => {
-  const [products, setProducts] = useState([]);
-  const api = 'https://fakestoreapi.com/products';
+    const [product, setProduct] = useState ([]);
 
-  useEffect(() => {
-    fetch(api).then((res) => res.json()).then((data) => setProducts(data));
-  }, []);
-
-
+    useEffect(() => {
+        const api = 'https://dummyjson.com/products';
+        fetch(api)
+          .then((res) => res.json())
+          .then((data) => setProduct(data.products))
+    }, []);
 
   return (
-    <div className="Wrapper">
-
-      <h1 className="title">
-        {products.length <= 0 ? "Loading..." : "Products"}
-      </h1>
-
-      <div className="box">
-        {
-          products.map((item) => (
-            <div className="conteiner">
-              <img src={item.image} alt="" />
-              <h1 className="title-card">{item.title}</h1>
-              <p className="text-card">{item.price}</p>
-            </div>
-          ))
-        }
-      </div>
+    <div>
+      <ProductList product={product}/>
     </div>
   )
 }
