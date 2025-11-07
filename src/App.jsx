@@ -139,22 +139,12 @@
 
 // export default App;
 
-import React, { useEffect, useState } from 'react';
-import ProductList from './components/ProductList';
+import MoviesList from "./components/MoviesList";
 
 const App = () => {
-    const [product, setProduct] = useState ([]);
-
-    useEffect(() => {
-        const api = 'https://dummyjson.com/products';
-        fetch(api)
-          .then((res) => res.json())
-          .then((data) => setProduct(data.products))
-    }, []);
-
   return (
     <div>
-      <ProductList product={product}/>
+      <MoviesList/>
     </div>
   )
 }
