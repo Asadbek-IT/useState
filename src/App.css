@@ -79,8 +79,8 @@
 }
 
 .title:hover{
-  color: goldenrod;
-  text-shadow: 0px 0px 5px goldenrod;
+  color: greenyellow;
+  text-shadow: 0px 0px 5px greenyellow;
 }
 
 .box{
@@ -103,9 +103,9 @@
 
 .conteiner:hover{
     border-radius: 40px;
-    box-shadow: 0px 0px 10px goldenrod;
-    color: goldenrod;
-    border: 1px solid goldenrod;
+    box-shadow: 0px 0px 10px greenyellow;
+    color: greenyellow;
+    border: 1px solid greenyellow;
 }
 
 .conteiner img {
@@ -121,7 +121,7 @@
 
 .text-card {
   font-size: 1.3em;
-  color: goldenrod;
+  color: greenyellow;
 }
 
 table{
@@ -140,6 +140,53 @@ td{
 
 td:hover{
     text-align: center;
-    border: 1px solid goldenrod;
-    box-shadow: 0px 0px 5px goldenrod;
+    border: 1px solid greenyellow;
+    box-shadow: 0px 0px 5px greenyellow;
+}
+
+form{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  margin: 20px auto;
+  flex-direction: column;
+}
+
+.input{
+  width: 500px;
+  height: 50px;
+  background-color: transparent;
+  border: 2px solid white;
+  border-radius: 15px;
+  text-align: center;
+  color: white;
+  font-size: 1.2em;
+  transition: 0.3s cubic-bezier(0.455, 0.03, 0.515, 0.955);
+}
+
+.input:hover{
+  color: greenyellow;
+  border: 1px solid greenyellow;
+  box-shadow: 0px 0px 10px greenyellow;
+  text-shadow: 0px 0px 5px greenyellow;
+}
+
+.btn{
+  width: 300px;
+  height: 30px;
+  background-color: transparent;
+  border: 2px solid white;
+  border-radius: 10px;
+  text-align: center;
+  font-size: 1.2em;
+  color: white;
+  transition: 0.3s cubic-bezier(0.455, 0.03, 0.515, 0.955);
+}
+
+.btn:hover{
+  color: greenyellow;
+  border: 1px solid greenyellow;
+  box-shadow: 0px 0px 5px greenyellow;
+  text-shadow: 0px 0px 2px greenyellow;
 }
